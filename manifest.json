@@ -1,0 +1,21 @@
+{
+    "manifest_version": 2,
+    "name": "Jobhunt Autofill",
+    "version": "1.0",
+    "description": "Automatically fill common repeatable details",
+    "icons": {
+        "48": "icons/border-48.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://jobs.lever.co/*",
+                "https://boards.greenhouse.io/*"
+            ],
+            "js": [
+                "discover-inputs-lever.js"
+            ],
+            "run_at": "document_end"
+        }
+    ]
+}
